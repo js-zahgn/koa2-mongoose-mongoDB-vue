@@ -5,7 +5,7 @@
 Base vue + less + vue-router + vuex + vant + axios + koa2 + mongodb
 
 ## start-up mongoDB server
-npm install mongodb
+download mongodb
 mongod
 
 ## Build Setup
