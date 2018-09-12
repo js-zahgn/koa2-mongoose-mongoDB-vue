@@ -14,7 +14,7 @@ mongod
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at 127.0.0.1:9009
 npm run dev
 
 # build for production with minification
