@@ -1,6 +1,5 @@
 const Router = require('koa-router')
 const mongoose = require('mongoose')
-const md5 = require('js-md5')
 const svgCaptcha = require('svg-captcha')
 let router = new Router()
 const bcrypt = require('bcrypt-nodejs')
