@@ -7,7 +7,6 @@ const fs = require('fs')
 const SALT_WORK_FACTOR = 10
 
 const createToken = require('../token/createToken.js');
-// const checkToken = require('../token/checkToken.js');
 
 // 获取验证码
 router.get('/getVerificationCode', async(ctx) => {
@@ -229,9 +228,5 @@ router.get('/getUsedUserImg/:name', async(ctx) => {
     ctx.body = {data: '获取头像失败-->' + err}
   }
 })
-
-// 前端登录md5加密防止恶意截取密码，将数据库中密码进行md5加密同前端传的md5密码进行对比
-// 后端存盐加密防止数据库被破解，将存入数据库的密码进行salt加密
-// 貌似前端加密和后端加密不能同时共存
 
 module.exports = router
