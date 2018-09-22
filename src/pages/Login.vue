@@ -48,6 +48,7 @@ export default {
       }
       _this.buttonLoading = true
       _this.$http.post(Url.login, param).then(res => {
+        _this.buttonLoading = false;
         if(res.data.data) {
           localStorage.setItem('userName', _this.userName)
           localStorage.setItem('token', res.data.token)
@@ -56,7 +57,6 @@ export default {
         } else {
           Toast.fail(`登录失败!</br>${res.data.data}`)
         }
-        _this.buttonLoading = false;
       })
     }
   }
