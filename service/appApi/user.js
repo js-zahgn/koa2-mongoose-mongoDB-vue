@@ -108,7 +108,7 @@ router.post('/login', async(ctx) => {
   const User = mongoose.model('User')
   // 查找用户是否存在，并对比密码
   await User.find({userName: name}).exec().then(async(res) => {
-    if(res) {
+    if(res.length > 0) {
       // 当用户名存在时，对比密码
       const newUser = new User()
       await newUser.comparePassword(password, res[0].password).then(async(isMatch) => {
